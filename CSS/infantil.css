@@ -1,0 +1,266 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+header .container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.navegacao{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.navegacao a{
+    text-decoration: none;
+    color: #2D5FB7;
+}
+.navegacao #logo{
+    width: 30px;
+    
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+ li a{
+    text-decoration: none;
+    color: #f4f5f7;
+    transition: 1s;
+}
+li a:hover{
+    color: #d7e3f8;
+}
+.abrir{
+    display: none;
+    cursor: pointer;
+}
+.mobile{
+    display: none;
+    cursor: pointer;
+}
+
+
+.banner{
+    background-image: url(../img/banners/banner-si.png);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+footer{
+    background-color: grey;
+    color: white;
+    padding: 60px 0 10px;
+    font-size: 14px;
+    display: flex;
+}
+footer h3{
+    margin-bottom: 15px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+footer #logo{
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.redes{
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.redes img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: transform 1s;
+}
+.redes img:hover{
+    transform: scale(1.1);
+}
+ .infos{
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.infos li{
+    margin-top: 11px;
+    margin-left: 40px;
+    transition: transform 1s;
+}
+.infos li:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px){
+    #menu{
+        display: none;
+    }
+    .abrir{
+        display: block;
+        color: #2D5FB7;
+        font-size: 40px;
+        margin-left: 90%;
+        top: 20px;
+        position: absolute;
+    }
+    .mobile{
+        display: block;
+        background-color: #2D5FB7;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        transition: .3s;
+    }
+    .mobile.open{
+        width: 30%;
+    }
+    .mobile.open ~ .base{
+        display: block;
+    }
+    .mobile .fechar {
+        color: #699bf1;
+        height: 28px;
+        font-size: 30px;
+    }
+    .mobile .fechar:hover{
+        background-color: rgb(46, 133, 233);
+    }
+    .mobile nav ul{
+        list-style: none;
+    }
+    .mobile nav ul li{
+        padding: 20px 15%;
+        display: block;
+    }
+    .mobile nav ul li a{
+        text-decoration: none;
+        color: #d7e3f8;
+        font-size: 20px;
+        cursor: pointer;
+        display: block;
+    }
+    .mobile li a:hover{
+        background-color: rgb(46, 133, 233);
+    }
+    .base{
+        background-color: rgba(0, 0, 0, 0.596);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8888;
+        display: none;
+    }
+
+    .banner{
+        width: 100%;
+        height: 250px;
+    }
+    footer{
+        width: 100%;
+        height: 60vh;
+        padding: 30px 0 5px;
+    }
+    footer #logo{
+        margin-left: 50%;
+        margin-top: 0%;
+    }
+    .redes{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 0;
+    }
+    .infos{
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 40%;
+    }
+
+    .redes li, .infos li{
+        display: inline-block;
+    }
+    
+}
+@media (max-width: 400px){
+    .abrir{
+        display: block;
+        color: #2D5FB7;
+        font-size: 40px;
+        margin-left: 80%;
+        top: 20px;
+        position: absolute;
+    }
+    .mobile{
+        height: 100vh;   
+    }
+    .mobile.open{
+        width: 45%;
+    }
+    .mobile nav ul li{
+        padding: 20px 25%;
+    }
+
+
+    .banner{
+        width: 100%;
+        height: 110px;
+    }
+    footer{
+        width: 100%;
+        height: 60vh;
+        padding: 30px 0 5px;
+
+    }
+    footer #logo{
+        width: 40px;
+        height: 40px;
+        margin-left: 50%;
+        margin-top: 0%;
+    }
+    .redes {
+        position: absolute;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+    .redes img{
+        margin-left: 220%;
+    }
+    .infos{
+        position: absolute;
+        margin-top: 42%;
+        margin-left: 23%;
+    }
+    .infos li{
+        margin-left: 0%;
+    }
+
+    .redes li, .infos li{
+        display: inline-block;
+    }
+    
+}
